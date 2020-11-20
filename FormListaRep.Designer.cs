@@ -38,8 +38,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarCancionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,9 +131,16 @@
             // cargarCancionesToolStripMenuItem
             // 
             this.cargarCancionesToolStripMenuItem.Name = "cargarCancionesToolStripMenuItem";
-            this.cargarCancionesToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.cargarCancionesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cargarCancionesToolStripMenuItem.Text = "Cargar canciones";
             this.cargarCancionesToolStripMenuItem.Click += new System.EventHandler(this.cargarCancionesToolStripMenuItem_Click);
+            // 
+            // agregarToolStripMenuItem
+            // 
+            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarToolStripMenuItem.Text = "Agregar";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
             // label4
             // 
@@ -143,12 +150,6 @@
             this.label4.Size = new System.Drawing.Size(163, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Lista Reproducciones";
-            // 
-            // agregarToolStripMenuItem
-            // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.agregarToolStripMenuItem.Text = "Agregar";
             // 
             // FormListaRep
             // 

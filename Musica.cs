@@ -1,7 +1,7 @@
 ﻿
 namespace FormListaReproduccionG4
 {
-    class Musica
+    public class Musica
     {
         #region Atributos
         private string cancion;

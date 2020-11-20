@@ -60,5 +60,19 @@ namespace FormListaReproduccionG4
         {
             formPadre.Show();
         }
+
+        private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAgregar formAgregar = new FormAgregar();
+            formAgregar.EnviarCancion += RecibirCancion;
+            formAgregar.ShowDialog();
+        }
+
+        private void RecibirCancion(Musica musica)
+        {
+            canciones.Add(musica);
+            lstReproducción.Items.Add(musica.Cancion);
+        
+        }
     }
 }
