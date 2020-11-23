@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 namespace FormListaReproduccionG4
 {
     public class Musica
@@ -7,7 +7,7 @@ namespace FormListaReproduccionG4
         private string cancion;
         private string artista;
         private string album;
-
+        private int duracion;
         #endregion
 
         #region Constructor
@@ -65,6 +65,16 @@ namespace FormListaReproduccionG4
                 }
                 
             } 
+        }
+
+        public int Duracion {
+            get
+            {
+                Random aleatorio = new Random();
+                duracion = aleatorio.Next(4,11);
+                return   duracion;
+            }
+            set => duracion = value; 
         }
         #endregion
 

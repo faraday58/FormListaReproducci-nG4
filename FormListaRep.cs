@@ -6,11 +6,13 @@ namespace FormListaReproduccionG4
 {
     public partial class FormListaRep : Form
     {
+        #region Atributos
         private Musica musica;
         private ArrayList canciones;
-
+        private int contador;
         private Form formPadre;
-
+        private int duracion;
+        #endregion
         /// <summary>
         /// Constructor de la clase FormListRep, requiere que el parámetro formPadre indicque el objeto
         /// de la clase FormRegistro
@@ -26,16 +28,19 @@ namespace FormListaReproduccionG4
             canciones = new ArrayList();
             canciones.Add(musica);
         }
-
         private void listaCanciones()
         {
-            
-            canciones.Add(new Musica("Noviembre sin ti","Reik","Reik"));
-            canciones.Add(new Musica("Torero","Chayane","Grandes Éxitos"));
-            canciones.Add(new Musica("Umbrella","Rihanna", "Good Girl Gone Bad: Reloaded"));
+
+            canciones.Add(new Musica("Noviembre sin ti", "Reik", "Reik"));
+            canciones.Add(new Musica("Torero", "Chayane", "Grandes Éxitos"));
+            canciones.Add(new Musica("Umbrella", "Rihanna", "Good Girl Gone Bad: Reloaded"));
             canciones.Add(new Musica("Back in Black", "AC/DC", "Back in Black"));
 
         }
+
+
+        #region Manejadores de Eventos
+
         private void lstReproducción_SelectedIndexChanged(object sender, EventArgs e)
         {
             musica = (Musica)canciones[lstReproducción.SelectedIndex];
@@ -73,6 +78,39 @@ namespace FormListaReproduccionG4
             canciones.Add(musica);
             lstReproducción.Items.Add(musica.Cancion);
         
+        }
+
+        private void timerTiempoCancion_Tick(object sender, EventArgs e)
+        {
+            if (contador <= 100)
+            {
+                int x = 100 / duracion;
+                int segundos = contador / x;
+                lbTiempoTrans.Text = segundos + " [s]";
+                pgbDuracion.Value = contador;
+                contador += x;                            
+            }
+            else
+            {
+                contador = 0;
+                pgbDuracion.Value = contador;
+                timerTiempoCancion.Stop();
+
+            }
+
+        }
+        #endregion
+
+        private void playToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if( lstReproducción.SelectedIndex  != -1  )
+            {
+                musica = (Musica)canciones[lstReproducción.SelectedIndex];
+                duracion =musica.Duracion ;
+                lbTiempoTotal.Text = duracion + " [s]";
+                timerTiempoCancion.Start();
+            }
+            
         }
     }
 }
