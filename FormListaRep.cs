@@ -112,5 +112,44 @@ namespace FormListaReproduccionG4
             }
             
         }
+
+        private void siguienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if(lstReproducción.SelectedIndex == lstReproducción.Items.Count-1  )
+            {
+                lstReproducción.SelectedIndex = 0;
+            }
+            else
+            {
+                lstReproducción.SelectedIndex += 1;
+            }            
+            musica = (Musica)canciones[lstReproducción.SelectedIndex];
+            duracion = musica.Duracion;
+            lbTiempoTotal.Text = duracion + " [s]";
+            contador = 0;
+        }
+
+        private void pausarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timerTiempoCancion.Stop();
+        }
+
+        private void anteriorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (lstReproducción.SelectedIndex == 0)
+            {
+                lstReproducción.SelectedIndex = lstReproducción.Items.Count-1;
+            }
+            else
+            {
+                lstReproducción.SelectedIndex -= 1;
+            }
+            musica = (Musica)canciones[lstReproducción.SelectedIndex];
+            duracion = musica.Duracion;
+            lbTiempoTotal.Text = duracion + " [s]";
+            contador = 0;
+        }
     }
 }

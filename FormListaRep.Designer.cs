@@ -40,20 +40,20 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarCancionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pgbDuracion = new System.Windows.Forms.ProgressBar();
-            this.timerTiempoCancion = new System.Windows.Forms.Timer(this.components);
-            this.lbTiempoTrans = new System.Windows.Forms.Label();
-            this.lbTiempoTotal = new System.Windows.Forms.Label();
             this.reproduccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pausarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.siguienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anteriorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.reproducciónAutomáticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bucleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aleatoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pgbDuracion = new System.Windows.Forms.ProgressBar();
+            this.timerTiempoCancion = new System.Windows.Forms.Timer(this.components);
+            this.lbTiempoTrans = new System.Windows.Forms.Label();
+            this.lbTiempoTotal = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,16 +146,82 @@
             // cargarCancionesToolStripMenuItem
             // 
             this.cargarCancionesToolStripMenuItem.Name = "cargarCancionesToolStripMenuItem";
-            this.cargarCancionesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cargarCancionesToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
             this.cargarCancionesToolStripMenuItem.Text = "Cargar canciones";
             this.cargarCancionesToolStripMenuItem.Click += new System.EventHandler(this.cargarCancionesToolStripMenuItem_Click);
             // 
             // agregarToolStripMenuItem
             // 
             this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
             this.agregarToolStripMenuItem.Text = "Agregar";
             this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
+            // 
+            // reproduccionToolStripMenuItem
+            // 
+            this.reproduccionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.playToolStripMenuItem,
+            this.pausarToolStripMenuItem,
+            this.siguienteToolStripMenuItem,
+            this.anteriorToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.reproducciónAutomáticaToolStripMenuItem,
+            this.bucleToolStripMenuItem,
+            this.aleatoriaToolStripMenuItem});
+            this.reproduccionToolStripMenuItem.Name = "reproduccionToolStripMenuItem";
+            this.reproduccionToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
+            this.reproduccionToolStripMenuItem.Text = "Reproducción";
+            // 
+            // playToolStripMenuItem
+            // 
+            this.playToolStripMenuItem.Name = "playToolStripMenuItem";
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.playToolStripMenuItem.Text = "Play";
+            this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            // 
+            // pausarToolStripMenuItem
+            // 
+            this.pausarToolStripMenuItem.Name = "pausarToolStripMenuItem";
+            this.pausarToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.pausarToolStripMenuItem.Text = "Pausar";
+            this.pausarToolStripMenuItem.Click += new System.EventHandler(this.pausarToolStripMenuItem_Click);
+            // 
+            // siguienteToolStripMenuItem
+            // 
+            this.siguienteToolStripMenuItem.Name = "siguienteToolStripMenuItem";
+            this.siguienteToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.siguienteToolStripMenuItem.Text = "Siguiente";
+            this.siguienteToolStripMenuItem.Click += new System.EventHandler(this.siguienteToolStripMenuItem_Click);
+            // 
+            // anteriorToolStripMenuItem
+            // 
+            this.anteriorToolStripMenuItem.Name = "anteriorToolStripMenuItem";
+            this.anteriorToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.anteriorToolStripMenuItem.Text = "Anterior";
+            this.anteriorToolStripMenuItem.Click += new System.EventHandler(this.anteriorToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(316, 6);
+            // 
+            // reproducciónAutomáticaToolStripMenuItem
+            // 
+            this.reproducciónAutomáticaToolStripMenuItem.Name = "reproducciónAutomáticaToolStripMenuItem";
+            this.reproducciónAutomáticaToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.reproducciónAutomáticaToolStripMenuItem.Text = "Reproducción Automática";
+            // 
+            // bucleToolStripMenuItem
+            // 
+            this.bucleToolStripMenuItem.Name = "bucleToolStripMenuItem";
+            this.bucleToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.bucleToolStripMenuItem.Text = "Bucle";
+            // 
+            // aleatoriaToolStripMenuItem
+            // 
+            this.aleatoriaToolStripMenuItem.Name = "aleatoriaToolStripMenuItem";
+            this.aleatoriaToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
+            this.aleatoriaToolStripMenuItem.Text = "Aleatoria";
             // 
             // label4
             // 
@@ -195,69 +261,6 @@
             this.lbTiempoTotal.Size = new System.Drawing.Size(38, 20);
             this.lbTiempoTotal.TabIndex = 4;
             this.lbTiempoTotal.Text = "5 [s]";
-            // 
-            // reproduccionToolStripMenuItem
-            // 
-            this.reproduccionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.playToolStripMenuItem,
-            this.pausarToolStripMenuItem,
-            this.siguienteToolStripMenuItem,
-            this.anteriorToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.reproducciónAutomáticaToolStripMenuItem,
-            this.bucleToolStripMenuItem,
-            this.aleatoriaToolStripMenuItem});
-            this.reproduccionToolStripMenuItem.Name = "reproduccionToolStripMenuItem";
-            this.reproduccionToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
-            this.reproduccionToolStripMenuItem.Text = "Reproducción";
-            // 
-            // playToolStripMenuItem
-            // 
-            this.playToolStripMenuItem.Name = "playToolStripMenuItem";
-            this.playToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.playToolStripMenuItem.Text = "Play";
-            this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
-            // 
-            // pausarToolStripMenuItem
-            // 
-            this.pausarToolStripMenuItem.Name = "pausarToolStripMenuItem";
-            this.pausarToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.pausarToolStripMenuItem.Text = "Pausar";
-            // 
-            // siguienteToolStripMenuItem
-            // 
-            this.siguienteToolStripMenuItem.Name = "siguienteToolStripMenuItem";
-            this.siguienteToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.siguienteToolStripMenuItem.Text = "Siguiente";
-            // 
-            // anteriorToolStripMenuItem
-            // 
-            this.anteriorToolStripMenuItem.Name = "anteriorToolStripMenuItem";
-            this.anteriorToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.anteriorToolStripMenuItem.Text = "Anterior";
-            // 
-            // reproducciónAutomáticaToolStripMenuItem
-            // 
-            this.reproducciónAutomáticaToolStripMenuItem.Name = "reproducciónAutomáticaToolStripMenuItem";
-            this.reproducciónAutomáticaToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.reproducciónAutomáticaToolStripMenuItem.Text = "Reproducción Automática";
-            // 
-            // bucleToolStripMenuItem
-            // 
-            this.bucleToolStripMenuItem.Name = "bucleToolStripMenuItem";
-            this.bucleToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.bucleToolStripMenuItem.Text = "Bucle";
-            // 
-            // aleatoriaToolStripMenuItem
-            // 
-            this.aleatoriaToolStripMenuItem.Name = "aleatoriaToolStripMenuItem";
-            this.aleatoriaToolStripMenuItem.Size = new System.Drawing.Size(319, 34);
-            this.aleatoriaToolStripMenuItem.Text = "Aleatoria";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(316, 6);
             // 
             // FormListaRep
             // 
