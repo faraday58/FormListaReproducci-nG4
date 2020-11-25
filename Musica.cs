@@ -7,6 +7,7 @@ namespace FormListaReproduccionG4
         private string cancion;
         private string artista;
         private string album;
+        private string albumCancion;
         private int duracion;
         #endregion
 
@@ -16,6 +17,7 @@ namespace FormListaReproduccionG4
             Cancion = cancion;
             Artista = artista;
             Album = album;
+            Console.WriteLine(albumCancion);
         }
         #endregion
 
@@ -58,9 +60,12 @@ namespace FormListaReproduccionG4
                 if(value== "")
                 {
                     album = "Welcome to Metropolis";
+                    albumCancion = album;
                 }
                 else
                 {
+                    cancion = value;
+                    albumCancion = value;
                     album = value;
                 }
                 

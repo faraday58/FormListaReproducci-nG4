@@ -106,7 +106,7 @@ namespace FormListaReproduccionG4
             if( lstReproducción.SelectedIndex  != -1  )
             {
                 musica = (Musica)canciones[lstReproducción.SelectedIndex];
-                duracion =musica.Duracion ;
+                duracion =musica.Duracion;
                 lbTiempoTotal.Text = duracion + " [s]";
                 timerTiempoCancion.Start();
             }
