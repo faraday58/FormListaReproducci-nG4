@@ -17,7 +17,7 @@ namespace FormRegistroG4
         {
             InitializeComponent();
             usuarios = new ArrayList();
-            usuarios.Add(new Usuario("123", "Armando"));
+            usuarios.Add(new Usuario("123","Armando"));
             usuarios.Add(new Usuario("567", "Jorge"));
 
         }

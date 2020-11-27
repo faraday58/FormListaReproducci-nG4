@@ -12,6 +12,8 @@ namespace FormListaReproduccionG4
         private int contador;
         private Form formPadre;
         private int duracion;
+        private int contadorCanciones;
+        //private bool automatica;
         #endregion
         /// <summary>
         /// Constructor de la clase FormListRep, requiere que el parámetro formPadre indicque el objeto
@@ -27,6 +29,7 @@ namespace FormListaReproduccionG4
             lstReproducción.Items.Add(musica.Cancion);
             canciones = new ArrayList();
             canciones.Add(musica);
+          //  automatica = false;
         }
         private void listaCanciones()
         {
@@ -58,6 +61,7 @@ namespace FormListaReproduccionG4
             {
                 lstReproducción.Items.Add(musica.Cancion);
             }
+            contadorCanciones = lstReproducción.Items.Count;
 
         }
 
@@ -82,6 +86,9 @@ namespace FormListaReproduccionG4
 
         private void timerTiempoCancion_Tick(object sender, EventArgs e)
         {
+                      
+
+            
             if (contador <= 100)
             {
                 int x = 100 / duracion;
@@ -94,9 +101,27 @@ namespace FormListaReproduccionG4
             {
                 contador = 0;
                 pgbDuracion.Value = contador;
-                timerTiempoCancion.Stop();
+                if( contadorCanciones ==0 || !reproducciónAutomáticaToolStripMenuItem.Checked    )
+                {
+                    timerTiempoCancion.Stop();
+                    contadorCanciones = lstReproducción.Items.Count;
+                    reproducciónAutomáticaToolStripMenuItem.Checked = false;
+                    
+                }
+                else if( lstReproducción.SelectedIndex < lstReproducción.Items.Count-1  )
+                {
+                    lstReproducción.SelectedIndex += 1;
+                }
+                else
+                {
+                    lstReproducción.SelectedIndex = 0;
+                }
+                contadorCanciones -= 1;//contadorCanciones = contadorCanciones - 1;              
+                
+
 
             }
+            
 
         }
         #endregion
@@ -151,5 +176,10 @@ namespace FormListaReproduccionG4
             lbTiempoTotal.Text = duracion + " [s]";
             contador = 0;
         }
+
+        /*private void reproducciónAutomáticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            automatica = true;
+        }*/
     }
 }

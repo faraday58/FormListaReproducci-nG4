@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30F89FA7-CD05-4F0B-AD59-E2AE945271BD}</ProjectGuid>
+    <ProjectGuid>{AB1CDC06-5AB0-4BD8-A604-1748FF43152B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UsuariosEntrada</RootNamespace>
-    <AssemblyName>UsuariosEntrada</AssemblyName>
+    <RootNamespace>EntradaUsuarios</RootNamespace>
+    <AssemblyName>EntradaUsuarios</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
